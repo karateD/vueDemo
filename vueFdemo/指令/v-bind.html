@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <!-- :src =>v-bind:src  改写发位：语法糖写法-->
+        <a :href="URL">百度一下</a>
+        <img :src="imgurl" alt="这是个图片啊">
+    </div>
+    <script>
+        let aha = new Vue({
+            el:"#demo",
+            data:{
+                URL:"baidu.com",
+                imgurl:"https://picsum.photos/seed/picsum/200/300"
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in movies">{{item}}</li> 
+            <!-- v-for：遍历数组使用时后面是等号   v-for="" -->
+            <!-- el,data使用的是冒号   el:'',data:{} -->
+        </ul>
+    </div>
+    <script>    
+        const app = new Vue({
+            el:'#app',
+            data: {
+                movies:["攀登者","虎胆龙威1","虎胆龙威2","虎胆龙威3"]    
+            },
+        })
+    </script>
+</body>
+</html>
