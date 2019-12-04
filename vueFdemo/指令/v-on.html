@@ -9,16 +9,21 @@
 </head>
 <body>
     <div id="demo">
-        <div :class="[classA,{classB: isB,classC: isC}]"></div>
+        <p v-if="hid">测试文本</p>
+        <button type="button" v-on:click="getChange()">点击</button>
     </div>
     <script>
         let app = new Vue({
             el:"#demo",
             data:{
-                classA: 'A',
-                isB:true,
-                isC:false
-            }
+                hid:false
+            },
+            methods: {
+                getChange(){
+                    alert("hello"),
+                    this.hid=true
+                }
+            },
         })
     </script>
 </body>
