@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p>Message is: {{ message }}</p>
+        <input v-model="message" placeholder="edit me">
+        <textarea placeholder="holder on" v-model="message">
+            
+        </textarea>
+        <div>-------------------------------------------------------------------</div>
+
+          <br>
+        <input type="radio" v-model="picked" id="one" value="one">
+        <label for="one">one</label>
+        <br>
+        <input type="radio" v-model="picked" id="two" value="two">
+        <label for="two">two</label>
+        <div>-------------------------------------------------------------------</div>
+
+        <br>
+        <input type="checkbox" value="book" id="book" v-model="guodong">
+        <label for="book">book</label>
+        <input type="checkbox" value="swim" id="swim" v-model="guodong">
+        <label for="swim">swim</label>
+        <input type="checkbox" value="running" id="running" v-model="guodong">
+        <label for="running">running</label>
+        <div>-------------------------------------------------------------------</div>
+        <!--xialakuang -->
+        <select name="" id="mol" v-model="selected">
+            <option value="" disabled>请选择：</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+       
+    </div>
+    <script>
+        let app =new Vue({
+            el:'#demo',
+            data:{
+                message:"hello",
+                picked:'',
+                selected:''
+            }
+        })
+    </script>
+</body>
+</html>
