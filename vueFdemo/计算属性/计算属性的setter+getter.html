@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        {{fristName}}
+        {{fullName}}
+    </div>
+    <script>        
+        let app = new Vue({
+            el:'#demo',
+            data: {
+                fristName:'guodong',
+                lastName:"li"
+            },
+            computed: {
+                // fullName:function(){
+                //     return this.fristName + ' ' + this.lastName
+                // }
+                // 计算属性一般没有set方法，只有get方法，位只读属性
+                fullName: {
+                    get: function(){
+                        return this.fristName + ' ' + this.lastName
+                    }
+                },
+                // 计算属性的最终方法 
+                 fullName: function(){
+                        return this.fristName + ' ' + this.lastName
+                }
+            },
+        })
+    </script>
+</body>
+</html>
