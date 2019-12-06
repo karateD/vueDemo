@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <component-a></component-a>
+    </div>
+    <script>    
+        var child = Vue.extends({
+            template:'<div>I am child</div>',
+            replace:true
+        })
+        var parent = Vue.extends({
+            template:'<div>I am parent</div>',
+            components:{
+                'child':child
+            }
+        })
+        let app = new Vue({
+            el:'demo',
+            components:{
+                'component-a':parent 
+            }
+        })
+    </script>
+</body>
+</html>

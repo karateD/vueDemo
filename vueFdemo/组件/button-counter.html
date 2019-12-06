@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../node_modules/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+            <button-counter title="title1"></button-counter>
+            <button-counter title="title2"></button-counter>
+    </div>
+    <script>
+        Vue.component('button-counter', {
+            props:['title'],
+            data: function () {
+                return {
+                count: 0
+            }
+            },
+            template: '<div><h1>h1</h1><button v-on:click="count++">{{title}}You clicked me {{ count }} times.</button></div>'
+        })
+        let vm = new Vue({
+            el:'#demo',
+            data:{
+
+            }
+        })
+    </script>
+</body>
+</html>
